@@ -1,0 +1,14 @@
+    [Unit]
+    Description=Must run before VirtualBox
+    After=network.target
+
+    [Service]
+    Type=oneshot
+    User=root
+    Group=root
+    LoadCredential=my_password:/home/bret/.credentials/soto_pw
+    ExecStart=/home/bret/kill-kvm/killkvm.sh
+    RemainAfterExit=yes
+
+    [Install]
+    WantedBy=multi-user.target
