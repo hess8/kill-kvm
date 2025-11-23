@@ -14,7 +14,8 @@ The main benefit is that killkvm.service runs the script at startup.  This is im
 
 ## Configuration
 * clone repo
-* edit killkvm.service to put in your path to the repo, or to wherever you put killkvm.sh
+* edit killkvm.service to put in your path to killkvm.sh
+* run `chmod +x killkvm.sh`
 * copy killkvm.service to `/etc/systemd/system/`
 * run `sudo systemctl daemon-reload`
 * run `sudo systemctl enable killkvm.service`
